@@ -27,10 +27,11 @@ main {
     align-items: center;
 }
 
-main div h1 {
+h1 {
     font-size: 50px;
     font-weight: 300;
     color: #AD85B4;
+    margin-top: 0px;
     margin-left: 60px;
     margin-bottom: 5px;
 }
@@ -42,6 +43,7 @@ main div p {
     color: #333;
     margin-left: 60px;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 section {
@@ -54,6 +56,30 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+section.clients {
+    height: 300px;
+    justify-content: left;
+}
+
+div.clients {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: auto;
+}
+
+div.clients img {
+    width: 70%;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+div.clients p {
+    margin: 0px;
 }
 
 nav {
@@ -135,9 +161,7 @@ img {
 }
 
 .break-vertical {
-    background-color: antiquewhite;
     width: 40px;
-    height: 1px;
 }
 
 .gallery {
