@@ -18,13 +18,14 @@ body {
 main {
     background-color: #ffffff;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
-    width: 1000px;
+    width: 70vw;
     height: 170px;
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
+    margin-top: 200px;
 }
 
 h1 {
@@ -49,18 +50,20 @@ main div p {
 section {
     background-color: #ffffff;
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
-    width: 1000px;
+    width: 70vw;
     height: auto;
     border-radius: 15px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-bottom: 200px;
 }
 
 section.clients {
     height: 300px;
     justify-content: left;
+    margin-bottom: 0px;
 }
 
 div.clients {
@@ -177,3 +180,36 @@ img {
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 1500px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 0px;
+        margin: 40px 40px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .break-vertical {
+        width: 0px;
+    }
+
+    main {
+        width: 400px;
+    }
+
+    section {
+        width: 400px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 0px;
+        margin: 40px 40px;
+    }
+}
+
