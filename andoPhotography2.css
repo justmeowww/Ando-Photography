@@ -1,5 +1,12 @@
+:root {
+    --bgcolor: #f1f1f1;
+    --uicolor: #ffffff;
+    --ftcolor: #333333;
+    --hdcolor: #AD85B4;
+}
+
 * {
-    color: #333;
+    color: var(--ftcolor);
     font-size: 16px;
     font-family: "Roboto";
     font-weight: 300;
@@ -7,7 +14,7 @@
 }
 
 body {
-    background-color: #f1f1f1;
+    background-color: var(--bgcolor);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -16,7 +23,7 @@ body {
 }
 
 main {
-    background-color: #ffffff;
+    background-color: var(--uicolor);
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
     width: 70vw;
     height: 170px;
@@ -31,7 +38,7 @@ main {
 h1 {
     font-size: 50px;
     font-weight: 300;
-    color: #AD85B4;
+    color: var(--hdcolor);
     margin-top: 0px;
     margin-left: 60px;
     margin-bottom: 5px;
@@ -41,14 +48,13 @@ main div p {
     font-size: 30px;
     font-weight: 300;
     font-style: italic;
-    color: #333;
     margin-left: 60px;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 section {
-    background-color: #ffffff;
+    background-color: var(--uicolor);
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
     width: 70vw;
     height: auto;
@@ -86,7 +92,7 @@ div.clients p {
 }
 
 nav {
-    background-color: #ffffff;
+    background-color: var(--uicolor);
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
     width: 400px;
     height: 600px;
@@ -109,7 +115,7 @@ nav div p {
 }
 
 button.nav-button {
-    background-color: #f1f1f1;
+    background-color: var(--bgcolor);
     height: 50px;
     width: 70%;
     border: none;
@@ -118,13 +124,13 @@ button.nav-button {
 }
 
 button.nav-button:hover {
-    background-color: #AD85B4;
-    color: #ffffff;
+    background-color: var(--hdcolor);
+    color: var(--uicolor);
 }
 
 button.nav-button-current {
-    background-color: #AD85B4;
-    color: #ffffff;
+    background-color: var(--hdcolor);
+    color: var(--uicolor);
     font-weight: 400;
     height: 50px;
     width: 70%;
@@ -137,7 +143,7 @@ img {
 }
 
 .break-line {
-    background-color: #333;
+    background-color: var(--ftcolor);
     width:70%;
     height: 1px;
     margin-top: 30px;
@@ -147,7 +153,6 @@ img {
 }
 
 .break {
-    background-color: aqua;
     flex-basis: 100%;
     height: 0px;
     margin-top: 10px;
