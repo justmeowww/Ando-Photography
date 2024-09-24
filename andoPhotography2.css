@@ -11,6 +11,7 @@
     font-family: "Roboto";
     font-weight: 300;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
@@ -35,13 +36,17 @@ main {
     margin-top: 200px;
 }
 
+main.other-works {
+    height: 110px;
+}
+
 h1 {
     font-size: 50px;
     font-weight: 300;
     color: var(--hdcolor);
     margin-top: 0px;
     margin-left: 60px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 main div p {
@@ -64,6 +69,11 @@ section {
     justify-content: center;
     align-items: center;
     margin-bottom: 200px;
+}
+
+section.other-works {
+    background-color: #f1f1f1;
+    box-shadow: none;
 }
 
 section.clients {
@@ -175,7 +185,7 @@ img {
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     grid-gap: 0px;
     margin: 40px 40px;
 }
@@ -186,13 +196,87 @@ img {
     object-fit: cover;
 }
 
+.gallery-other {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 20px;
+    margin: 0px;
+}
+
+.gallery-other a {
+    position: relative;
+}
+
+.gallery-other a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
+}
+
+p.extra {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--uicolor);
+    color: var(--bgcolor);
+    border-radius: 15px;
+    margin: 0;
+    font-size: 100px;
+    font-weight: 500;
+}
+
+div.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--uicolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+div.overlay:hover {
+    opacity: 1;
+}
+
+div.overlay h1 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+div.overlay div {
+    text-align: center;
+}
+
 @media screen and (max-width: 1500px) {
     .gallery {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
         grid-gap: 0px;
         margin: 40px 40px;
+    }
+
+    .gallery-other {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 20px;
+        margin: 0px;
     }
 }
 
@@ -215,5 +299,13 @@ img {
         grid-template-rows: repeat(1, 1fr);
         grid-gap: 0px;
         margin: 40px 40px;
+    }
+
+    .gallery-other {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 20px;
+        margin: 0px;
     }
 }
