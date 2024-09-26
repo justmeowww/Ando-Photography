@@ -71,6 +71,17 @@ section {
     margin-bottom: 200px;
 }
 
+section.contact {
+    height: auto;
+    justify-content: left;
+}
+
+section.contact p {
+    width: 70%;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
 section.other-works {
     background-color: #f1f1f1;
     box-shadow: none;
@@ -278,6 +289,10 @@ div.overlay div {
         grid-template-rows: repeat(1, 1fr);
         grid-gap: 20px;
         margin: 0px;
+    }
+
+    section.contact p {
+        width: auto;
     }
 }
 
