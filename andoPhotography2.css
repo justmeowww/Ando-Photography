@@ -5,6 +5,19 @@
     --hdcolor: #AD85B4;
 }
 
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation: 1s fadeInUp;
+}
+
 * {
     color: var(--ftcolor);
     font-size: 16px;
