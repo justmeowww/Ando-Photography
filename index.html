@@ -44,25 +44,61 @@
         </main>
         <div class="break spaced"></div>
         <section>
-            <div class="gallery">
-                <img src="20240831_sanJapan/sydStella/000.jpg"/>
-                <img src="20240831_sanJapan/sydStella/001.jpg"/>
-                <img src="20240831_sanJapan/sydStella/002.jpg"/>
-                <img src="20240831_sanJapan/sydStella/003.jpg"/>
-                <img src="20240831_sanJapan/sydStella/004.jpg"/>
-                <img src="20240831_sanJapan/sydStella/005.jpg"/>
-                <img src="20240831_sanJapan/sydStella/006.jpg"/>
-                <img src="20240831_sanJapan/sydStella/007.jpg"/>
-                <img src="20240831_sanJapan/tia/000.jpg"/>
-                <img src="20240831_sanJapan/tia/001.jpg"/>
-                <img src="20240831_sanJapan/tia/002.jpg"/>
-                <img src="20240831_sanJapan/tia/003.jpg"/>
-                <img src="20240831_sanJapan/tia/004.jpg"/>
-                <img src="20240831_sanJapan/tia/005.jpg"/>
-                <img src="20240831_sanJapan/tia/006.jpg"/>
-                <img src="20240831_sanJapan/tia/007.jpg"/>
+            <div class="gallery" id="photos">
+
             </div>
         </section>
     </div>
+    <div class="popup" id="popup" onclick="closeImage()">
+        <div class="slider" id="fullPhotos">
+
+        </div>
+    </div>
+    <script>
+        const numOfPhotos = 8;
+        const numOfPhotos2 = 8;
+        let folderDir = 'galleries/20240831_sanJapan/sydStella/';
+        let folderDir2 = 'galleries/20240831_sanJapan/tia/';
+
+        let photos = document.getElementById("photos");
+        for(let i = 0; i < numOfPhotos; i++) {
+            let imgTag = '<a href="#';
+            let imgTag2 = imgTag.concat(i, '" onclick="openImage();"><img src="');
+            let path = imgTag2.concat(folderDir, i, '.jpg"', "/></a>");
+            photos.innerHTML += path;
+        }
+
+        let fullPhotos = document.getElementById("fullPhotos");
+        for(let i = 0; i < numOfPhotos; i++) {
+            let imgTag = '<img src="';
+            let path = imgTag.concat(folderDir, i, '.jpg" id="', i, '"/>');
+            fullPhotos.innerHTML += path;
+        }
+
+        let photos2 = document.getElementById("photos");
+        for(let i = 0; i < numOfPhotos2; i++) {
+            let imgTag = '<a href="#';
+            let imgTag2 = imgTag.concat(i+numOfPhotos, '" onclick="openImage();"><img src="');
+            let path = imgTag2.concat(folderDir2, i, '.jpg"', "/></a>");
+            photos.innerHTML += path;
+        }
+
+        let fullPhotos2 = document.getElementById("fullPhotos");
+        for(let i = numOfPhotos; i < numOfPhotos2+numOfPhotos; i++) {
+            let imgTag = '<img src="';
+            let path = imgTag.concat(folderDir2, i-numOfPhotos, '.jpg" id="', i, '"/>');
+            fullPhotos.innerHTML += path;
+        }
+
+        function openImage() {
+            let popup = document.getElementById("popup");
+            popup.style.visibility = "visible";
+        }
+
+        function closeImage() {
+            let popup = document.getElementById("popup");
+            popup.style.visibility = "hidden";
+        }
+    </script>
 </body>
 </html>
