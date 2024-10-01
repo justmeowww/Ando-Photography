@@ -60,6 +60,7 @@ h1 {
     color: var(--hdcolor);
     margin-top: 0px;
     margin-left: 60px;
+    margin-right: 60px;
     margin-bottom: 0px;
 }
 
@@ -213,7 +214,7 @@ img {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 1fr);
     grid-gap: 0px;
-    margin: 40px 40px;
+    margin: 20px 20px;
 }
 
 .gallery img {
@@ -320,10 +321,10 @@ div.slider img {
 
     .gallery {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(1, 1fr);
         grid-gap: 0px;
-        margin: 40px 40px;
+        margin: 20px 20px;
     }
 
     .gallery-other {
@@ -354,10 +355,10 @@ div.slider img {
 
     .gallery {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr);
         grid-gap: 0px;
-        margin: 40px 40px;
+        margin: 20px 20px;
     }
 
     .gallery-other {
