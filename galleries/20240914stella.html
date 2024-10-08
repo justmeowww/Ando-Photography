@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="../andoPhotography2.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Kuromi</title>
+</head>
+<body class="fadeIn">
+    <nav>
+        <div>
+            <img src="../logos/andoPhotoLogo2.png" alt="Site Logo" width="70%"/>
+            <div class="break-line""></div>
+            <p>
+                This is where I’ll be sharing all my cosplay photography. 
+                I will try to make all photos available for viewing, but not at its full resolution. 
+                The full resolution download is only available to the clients.
+            </p>
+            <div class="break"></div>
+            <button class="nav-button" onclick="window.location.href = '../index.html'">
+                LATEST
+            </button>
+            <div class="break"></div>
+            <button class="nav-button-current" onclick="window.location.href = '../otherWorks.html'">
+                OTHER WORKS
+            </button>
+            <div class="break"></div>
+            <button class="nav-button" onclick="window.location.href = '../contact.html'">
+                CONTACT
+            </button>
+        </div>
+    </nav>
+    <div class="break-vertical"></div>
+    <div>
+        <main>
+            <div>
+                <h1>Kuromi</h1>
+                <p>2024.09.14</p>
+            </div>
+        </main>
+        <div class="break spaced"></div>
+        <section class="clients">
+            <div>
+                <h1>Clients</h1>
+                <div style="display: flex; margin-left: 40px;">
+                    <div class="clients">
+                        <img src="20240831_sanJapan/sydStella/clients/0.png"/>
+                        <p>@estellayxx</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="break spaced"></div>
+        <section>
+            <div class="gallery" id="photos">
+
+            </div>
+        </section>
+    </div>
+    <div class="popup" id="popup" onclick="closeImage()">
+        <div class="slider" id="fullPhotos">
+
+        </div>
+    </div>
+    <script>
+        const numOfPhotos = 22;
+        let folderDir = '20240914_animeHouston/stella/';
+
+        let photos = document.getElementById("photos");
+        for(let i = 0; i < numOfPhotos; i++) {
+            let imgTag = '<a href="#';
+            let imgTag2 = imgTag.concat(i, '" onclick="openImage();"><img src="');
+            let path = imgTag2.concat(folderDir, i, '.jpg"', "/></a>");
+            photos.innerHTML += path;
+        }
+
+        let fullPhotos = document.getElementById("fullPhotos");
+        for(let i = 0; i < numOfPhotos; i++) {
+            let imgTag = '<img src="';
+            let path = imgTag.concat(folderDir, i, '.jpg" id="', i, '"/>');
+            fullPhotos.innerHTML += path;
+        }
+
+        function openImage() {
+            let popup = document.getElementById("popup");
+            popup.style.visibility = "visible";
+        }
+
+        function closeImage() {
+            let popup = document.getElementById("popup");
+            popup.style.visibility = "hidden";
+        }
+    </script>
+</body>
+</html>
