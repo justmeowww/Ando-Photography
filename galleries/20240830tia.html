@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache">
+    <script type = "text/javascript" src="../scripts/functions.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="../andoPhotography2.css"/>
@@ -15,7 +16,9 @@
 <body class="fadeIn">
     <nav>
         <div>
-            <img src="../logos/andoPhotoLogo2.png" alt="Site Logo" width="70%"/>
+            <a href="../index.html">
+                <img src="../logos/andoPhotoLogo2.png" alt="Site Logo" width="70%"/>
+            </a>
             <div class="break-line""></div>
             <p>
                 This is where I’ll be sharing all my cosplay photography. 
@@ -49,53 +52,25 @@
             <div>
                 <h1>Clients</h1>
                 <div style="display: flex; margin-left: 40px;">
-                    <div class="clients">
-                        <img src="20240831_sanJapan/sydStella/clients/0.png"/>
-                        <p>@tricksteresque</p>
-                    </div>
+                    <a href="https://www.instagram.com/tricksteresque/" target="_blank">
+                        <div class="clients">
+                                <img src="20240831_sanJapan/sydStella/clients/0.png"/>
+                                <p>@tricksteresque</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
         <div class="break spaced"></div>
         <section>
-            <div class="gallery" id="photos">
-
-            </div>
+            <div class="gallery" id="photos"></div>
         </section>
     </div>
     <div class="popup" id="popup" onclick="closeImage()">
-        <div class="slider" id="fullPhotos">
-
-        </div>
+        <div class="slider" id="fullPhotos"></div>
     </div>
     <script>
-        const numOfPhotos = 12;
-        let folderDir = '20240831_sanJapan/tia/';
-
-        let photos = document.getElementById("photos");
-        for(let i = 0; i < numOfPhotos; i++) {
-            let imgTag = '<a href="#';
-            let imgTag2 = imgTag.concat(i, '" onclick="openImage();"><img src="');
-            let path = imgTag2.concat(folderDir, i, '.jpg"', "/></a>");
-            photos.innerHTML += path;
-        }
-
-        let fullPhotos = document.getElementById("fullPhotos");
-        for(let i = 0; i < numOfPhotos; i++) {
-            let imgTag = '<img src="';
-            let path = imgTag.concat(folderDir, i, '.jpg" id="', i, '"/>');
-            fullPhotos.innerHTML += path;
-        }
-
-        function openImage() {
-            let popup = document.getElementById("popup");
-            popup.style.visibility = "visible";
-        }
-
-        function closeImage() {
-            let popup = document.getElementById("popup");
-            popup.style.visibility = "hidden";
-        }
+        createGallery(12,'20240831_sanJapan/tia/');
     </script>
 </body>
 </html>
