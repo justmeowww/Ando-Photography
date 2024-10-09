@@ -11,7 +11,7 @@
         LATEST
     </button>
     <div class="break"></div>
-    <button class="nav-button" onclick="window.location.href = 'otherWorks.html'">
+    <button class="nav-button" onclick="window.location.href = 'other-works.html'">
         OTHER WORKS
     </button>
     <div class="break"></div>

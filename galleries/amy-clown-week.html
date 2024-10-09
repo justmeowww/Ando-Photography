@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Unsorted Photos 2024</title>
+    <title>Clown Week</title>
 </head>
 <body class="fadeIn">
     <nav>
@@ -30,7 +30,7 @@
                 LATEST
             </button>
             <div class="break"></div>
-            <button class="nav-button-current" onclick="window.location.href = '../otherWorks.html'">
+            <button class="nav-button-current" onclick="window.location.href = '../other-works.html'">
                 OTHER WORKS
             </button>
             <div class="break"></div>
@@ -43,20 +43,38 @@
     <div>
         <main>
             <div>
-                <h1>Unsorted</h1>
-                <p>2024</p>
+                <h1>Clown Week</h1>
+                <p>2024.08.20</p>
             </div>
         </main>
         <div class="break spaced"></div>
+        <section class="clients">
+            <div>
+                <h1>Clients</h1>
+                <div style="display: flex; margin-left: 40px;">
+                    <a href="https://www.instagram.com/tapiocatherapychan/" target="_blank">
+                        <div class="clients">
+                                <img src="20240831_sanJapan/sydStella/clients/0.png"/>
+                                <p>@tapiocatherapychan</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div class="break spaced"></div>
         <section>
-            <div class="gallery" id="photos"></div>
+            <div class="gallery" id="photos">
+
+            </div>
         </section>
     </div>
     <div class="popup" id="popup" onclick="closeImage()">
-        <div class="slider" id="fullPhotos"></div>
+        <div class="slider" id="fullPhotos">
+
+        </div>
     </div>
     <script>
-        createGallery(5, "2024_unsorted/");
+        createGallery(34, '20240820_colorfactory/');
     </script>
 </body>
 </html>
