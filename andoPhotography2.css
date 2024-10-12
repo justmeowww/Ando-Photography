@@ -84,7 +84,7 @@ section {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 0px;
 }
 
 section.contact {
@@ -106,7 +106,6 @@ section.other-works {
 section.clients {
     height: auto;
     justify-content: left;
-    margin-bottom: 0px;
     padding: 40px 0;
 }
 
@@ -315,13 +314,49 @@ div.slider {
     padding: 0;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scroll-snap-align: center;
     scroll-snap-type: x mandatory;
 }
 
 div.slider img {
     width: 70vh;
     scroll-snap-align: start;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+footer a {
+    position: relative;
+}
+
+div.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    background-color: var(--hdcolor);
+    height: 50px;
+    width: 200px;
+    box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
+}
+
+div.button p {
+    color: var(--uicolor);
+    font-weight: 400;
+}
+
+div.go-to-top {
+    background-color: var(--uicolor);
+}
+
+div.go-to-top p {
+    color: var(--ftcolor);
 }
 
 @media screen and (min-width: 1921px) {
@@ -343,6 +378,10 @@ div.slider img {
 }
 
 @media screen and (max-width: 1500px) {
+    footer {
+        justify-content: center;
+    }
+
     .fadeIn {
         animation: 0s fadeInUp;
     }
@@ -373,6 +412,7 @@ div.slider img {
 }
 
 @media screen and (max-width: 800px) {
+
     .break-vertical {
         width: 0px;
     }
