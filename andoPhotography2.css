@@ -147,6 +147,10 @@ nav {
     top: 100px;
 }
 
+nav div a {
+    position: relative;
+}
+
 nav div {
     text-align: center;
 }
@@ -335,7 +339,7 @@ footer a {
     position: relative;
 }
 
-div.button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -346,16 +350,16 @@ div.button {
     box-shadow: 5px 5px 10px 0px rgba(0,0,0,.05);
 }
 
-div.button p {
+.button p {
     color: var(--uicolor);
     font-weight: 400;
 }
 
-div.go-to-top {
+.go-to-top {
     background-color: var(--uicolor);
 }
 
-div.go-to-top p {
+.go-to-top p {
     color: var(--ftcolor);
 }
 
