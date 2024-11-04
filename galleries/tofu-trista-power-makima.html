@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Cache-Control" content="no-cache">
-    <script type = "text/javascript" src="scripts/functions.js"></script>
+    <script type = "text/javascript" src="../scripts/functions.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="andoPhotography2.css"/>
+    <link rel="stylesheet" href="../andoPhotography2.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Ando Photography</title>
+    <title>Power and Makima Nurses</title>
 </head>
 <body class="fadeIn">
     <nav>
@@ -26,25 +26,47 @@
                 The full resolution download is only available to the clients.
             </p>
             <div class="break"></div>
-            <button class="nav-button-current" onclick="window.location.href = '../index.html'">
+            <button class="nav-button" onclick="window.location.href = '../index.html'">
                 LATEST
             </button>
             <div class="break"></div>
-            <button class="nav-button" onclick="window.location.href = '../other-works.html'">
+            <button class="nav-button-current" onclick="window.location.href = '../other-works.html'">
                 OTHER WORKS
             </button>
             <div class="break"></div>
             <button class="nav-button" onclick="window.location.href = '../contact.html'">
                 CONTACT
             </button>
+        </div>
     </nav>
     <div class="break-vertical"></div>
     <div id="top">
-        <main class="other-works">
+        <main>
             <div>
-                <h1>Latest</h1>
+                <h1>Power and Makima Nurses</h1>
+                <p>2024.10.19</p>
             </div>
         </main>
+        <div class="break spaced"></div>
+        <section class="clients">
+            <div>
+                <h1>Clients</h1>
+                <div style="display: flex; margin-left: 40px; flex-wrap: wrap;">
+                    <a href="https://www.instagram.com/sunflowersfortofu/" target="_blank">
+                        <div class="clients">
+                                <img src="20241019_madekulture/tofuTrista/clients/0.jpg"/>
+                                <p>@sunflowersfortofu</p>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/toyfoa/" target="_blank">
+                        <div class="clients">
+                                <img src="20241019_madekulture/tofuTrista/clients/1.jpg"/>
+                                <p>@toyfoa</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
         <div class="break spaced"></div>
         <section>
             <div class="gallery" id="photos"></div>
@@ -65,7 +87,7 @@
         <div class="slider" id="fullPhotos"></div>
     </div>
     <script>
-        createLatest(6,14,"galleries/20241019_madekulture/tofuTrista/","galleries/20241019_madekulture/");
+        createGallery(6,'20241019_madekulture/tofuTrista/');
     </script>
 </body>
 </html>
